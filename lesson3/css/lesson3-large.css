@@ -1,0 +1,119 @@
+/* --------------------------------------------- */
+/* ---------Desktop View Formatting ----------- */
+/* --------------------------------------------- */
+@media only screen and (min-width: 60em) {
+    main {
+		grid-template-columns: 1fr 1fr 1fr;
+    }
+    section:nth-child(3) {
+		grid-column: span 1;
+    }
+    header, main, footer {
+      margin: 1.25rem auto;
+      padding: 1em;
+      max-width: none;
+    }
+    #headerContainer, #mainNav ul, main, #footerContent {
+      max-width: 1020px;
+    }
+
+
+    /* --------------------------------------------- */
+    /* --------- Header Formatting ----------- */
+    /* --------------------------------------------- */
+    header {
+      padding: 0;
+    }
+    #headerContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1em;
+    }
+    
+    header img {
+      margin-left: 30px;
+      width: 100%;
+    }
+    header h1 {
+      padding: 80px 50px 60px 60px
+    }
+    
+
+    /* ----- Main Nav Formatting ----- */
+    #mainNav {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 82px;
+      grid-column: span 2;
+      background-color: #015249;
+    }
+    #mainNav ul {
+      width: 100%;
+      background-color: #015249;
+      margin: 0;
+      padding: 0;
+    }
+    .firstlink {
+      border-left: 3px solid #636366;
+    }
+    .lastnavlink {
+      border-right: 3px solid #636366;
+    }
+
+
+    /* ----- Link Styling ----- */
+
+
+    /* --------------------------------------------- */
+    /* --------- Home Page Main Content Formatting ----------- */
+    /* --------------------------------------------- */
+    .purpose {
+    grid-column: span 2;
+    }
+
+
+
+    /* --------------------------------------------- */
+    /* --------- Target Audience Page Formatting ----------- */
+    /* --------------------------------------------- */
+    .audience {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    #target, #personahead, #scenarios {
+      grid-column: span 2;
+    }
+
+
+
+    /* --------------------------------------------- */
+    /* --------- Color Scheme Page Formatting ----------- */
+    /* --------------------------------------------- */
+    #colorhead {
+      grid-column: span 3;
+    }
+
+
+    /* --------------------------------------------- */
+    /* --------- Typography Page Formatting ----------- */
+    /* --------------------------------------------- */
+    #navstyle {
+      grid-column-start: 2;
+    }
+
+
+    /* --------------------------------------------- */
+    /* --------- Site Map Page Formatting ----------- */
+    /* --------------------------------------------- */
+    .map {
+      grid-column: span 3;
+    }
+
+
+    /* --------------------------------------------- */
+    /* --------- Footer Formatting ----------- */
+    /* --------------------------------------------- */
+
+
+  }

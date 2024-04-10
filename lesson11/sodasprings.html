@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1">
+        <title>Soda Springs | Southeast Idaho Weather</title>
+        <meta name="description" content="Soda Springs Town Page of Southeast Idaho Weather site for Heather Holt in CIT 230: Web Frontend Development at Brigham Young University-Idaho.">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="shortcut icon" href="../images/favicon48.png">
+        <link rel="stylesheet" href="css/seidweather-small.css">
+        <link rel="stylesheet" href="css/seidweather-medium.css">
+        <link rel="stylesheet" href="css/seidweather-large.css">
+    </head>
+    <body>
+        <a href="index.html">
+            <header id="headerContainer">
+                <img id="seidsymbol" src="images/seidweathersymbol.png" alt="silhouette of Idaho">
+                <div id="headerText">
+                    <h1 id="siteTitle">Southeast Idaho <span id="weatherHead">Weather</span></h1>
+                    <h2 id="tagline">Keeping Our Eye <span>On The Sky</span></h2>
+                </div>
+            </header>
+        </a>
+        <nav id="mainNav">
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li class="firstlink"><a href="index.html">Home</a></li>
+                <li><a href="preston.html">Preston</a></li>
+                <li id="activelink"><a href="sodasprings.html">Soda Springs</a></li>
+                <li><a href="fishhaven.html">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li class="lastnavlink"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="mainContent" id="hero">
+                <h1 id="townHeading">Soda Springs</h1>
+                <img id="heroImg" src="images/heroShedLarge.jpg" alt="Snowy landscape with trees and shed" sizes="60vw"
+                srcset="images/heroShedSmall.jpg 400w,images/heroShedMedium.jpg 600w, images/heroShedLarge.jpg 900w"/>
+                <div id="summary">
+                    <h3>Weather Summary</h3>
+                    <p>Currently: <span id="condition">N/A</span></p>
+                    <p>Temperature: <span><span id="temp">N/A</span>&deg; F</span></p>
+                    <p>Wind Chill: <span id="wchill"></span></p>
+                    <p>Humidity: <span><span id="humid">N/A</span>&percnt;</span></p>
+                    <p>Wind Speed: <span><span id="wind">N/A</span> mph</span></p>
+                </div>
+            </div>
+            <div class="mainContent" id="forecast">
+                <h2 id="forecastHeading">5 Day Forecast</h2>
+                <table>
+                    <tr>
+                        <th id="day1">N/A</th>
+                        <th id="day2">N/A</th>
+                        <th id="day3">N/A</th>
+                        <th id="day4">N/A</th>
+                        <th id="day5">N/A</th>
+                    </tr>
+                    <tr id="icons">
+                        <td><img id="day1pic" src="#" alt="alt"/></td>
+                        <td><img id="day2pic" src="#" alt="alt"/></td>
+                        <td><img id="day3pic" src="#" alt="alt"/></td>
+                        <td><img id="day4pic" src="#" alt="alt"/></td>
+                        <td><img id="day5pic" src="#" alt="alt"/></td>
+                    </tr>
+                    <tr id="temps">
+                        <td><span id="day1temp">N/A</span> &deg;F</td>
+                        <td><span id="day2temp">N/A</span> &deg;F</td>
+                        <td><span id="day3temp">N/A</span> &deg;F</td>
+                        <td><span id="day4temp">N/A</span> &deg;F</td>
+                        <td><span id="day5temp">N/A</span> &deg;F</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mainContent" id="events">
+                    <h2 id="eventsHeading">Local Events</h2>
+                    <ul id="eventsList">
+                    </ul>                    
+            </div>
+            <article class="mainContent" id="article">
+                <h3>Caribou sighting in Caribou County</h3>
+                <p id="byline">By Nancy Eskelson</p>
+                <figure>
+                    <img src="images/caribou.jpg" alt="Caribou in snow."/>
+                    <figcaption>Caribou in snow.</figcaption>
+                </figure>
+                <p>A caribou has been spotted in caribou county, near Draney Peak. Many have discounted the sighting, as mountain caribou are endangered and have not been known to be seen south of the Salmon River area. The remainder of the sparse Selkirk herd that has resided in northern Idaho was relocated to Canada on January 14, 2019, leaving the species extirpated (extinct in a certain geographic area, but still in existence elsewhere). Skeptics have said that it couldn’t have been a caribou and that the source must be mistaken. The eyewitness, Archer Phillips, remains adamant that he did indeed see a caribou, and not an elk as many have speculated. Archer was unable to obtain a photograph of the animal, but insists that the coloring and antler shape was consistent with that of a caribou. Elk have smaller antlers (only males have antlers) and dark brown necks, weigh more than caribou, and migrate long distances. Caribou have larger antlers (both male and female have antlers), weigh less than elk, do not migrate long distances, and have white/gray necks. The citizens of Caribou County will have to wait and see if further evidence of a caribou in the area can be corroborated.</p>
+            </article>
+        </main>
+        <footer>
+            <div id="contact">
+                <div id="contactMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.4877645228735!2d-111.87577298434546!3d42.09702337920543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f7e967e1ebc7%3A0x14469667cfe31546!2s30%20N%201st%20E%2C%20Preston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1572776267772!5m2!1sen!2sus" style="border:0;" allowfullscreen="" title="Map showing location of Southeast Idaho Weather Headquarters"></iframe>
+                </div>
+                <div id="info">
+                    <p><span id="contactHeader">Southeast Idaho Weather</span></p>
+                    <address>
+                        <p>30 N 1st E <br>Preston, ID 83263</p>
+                    </address>
+                    <img id="phone" src="images/phone.png" alt="Phone Icon"/>
+                    <p id="number">208.555.5555</p>
+                    <br>
+                    <img id="envelope" src="images/envelope.png" alt="Envelope Icon"/>
+                    <p id="email"><a href="mailto:#">info@seidweather.com</a></p>
+                </div>
+            </div>
+            <div id="footerContent">
+                <p id="currentDate"></p>
+                <p>&copy; <span id="copyrightdate"></span> Heather Holt &nbsp; &vert; &nbsp; Utah, USA &nbsp; &vert; &nbsp; <a href="http://www.byui.edu/online" rel="noopener" target="_blank">BYU-Idaho Online Learning</a> &nbsp; &vert; &nbsp; <a href="../termsofuse.html" target="_blank">Terms of Use</a> &nbsp; &vert; &nbsp; <a href="../attributions.html" target="_blank">Attributions</a><br>
+                This page was last updated on <span id="modifieddate"></span> <br>
+                <a href="../index.html">Return to Assignment Portal</a></p>
+            </div>
+        </footer>
+        <script src="js/dates.js"></script>
+        <script src="js/soda.js"></script>
+        <script src="js/windchill.js"></script>
+        <script src="js/onload-soda.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script src="js/fontloader.js"></script>
+    </body>
+</html>

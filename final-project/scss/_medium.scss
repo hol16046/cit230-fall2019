@@ -1,0 +1,128 @@
+/* --------------------------------------------- */
+/* --------- Home Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+article figure {
+    float: right;
+    width: 50%;
+}
+#featured {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    figure:last-child {
+        grid-column: span 2;
+        width: 50%;
+        justify-self: center;
+    }
+}
+
+
+
+/* --------------------------------------------- */
+/* --------- Temples Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.cards {
+    margin-top: 30px;
+    section {
+        margin-top: 0;
+        .email, .phone {
+            font-size: 16px;
+        }
+    }
+}
+section:last-child {
+    margin-bottom: 0px;
+}
+
+
+/* --------------------------------------------- */
+/* --------- Reservations Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+form {
+    max-width: 600px;
+}
+
+/* --------------------------------------------- */
+/* --------- Thanks Page Formatting ----------- */
+/* --------------------------------------------- */
+#thanks {
+    font-size: 25px;
+}
+
+
+/* --------------------------------------------- */
+/* --------- Footer Formatting ----------- */
+/* --------------------------------------------- */
+footer {
+    padding-top: 0;
+}
+/* ----- Contact Info Styling ----- */
+#contact {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+#contactMap {
+    display: block;
+    height: 130px;
+    float: left;
+}
+#contactpage {
+    min-height: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    #contactMap {
+        display: none;
+    }
+}
+
+/* --------------------------------------------- */
+/* --------- Amenities Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+#services {
+    #amenitieslist {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        #amenities {
+            order: 2;
+        }
+    }
+}
+
+
+/* --------------------------------------------- */
+/* --------- Receptions Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+#receptions {
+    #features {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+        figure:last-child {
+            grid-column: span 2;
+            width: 60%;
+            justify-self: center;
+        }
+    }
+}
+
+
+/* --------------------------------------------- */
+/* --------- Missionaries Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+#missionaries {
+    #rooms {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+        figure:last-child {
+            grid-column: span 2;
+            width: 60%;
+            justify-self: center;
+        }
+    }
+}

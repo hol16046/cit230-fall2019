@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1">
+        <title>Fish Haven | Southeast Idaho Weather</title>
+        <meta name="description" content="Fish Haven Town Page of Southeast Idaho Weather site for Heather Holt in CIT 230: Web Frontend Development at Brigham Young University-Idaho.">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="shortcut icon" href="../images/favicon48.png">
+        <link rel="stylesheet" href="css/seidweather-small.css">
+        <link rel="stylesheet" href="css/seidweather-medium.css">
+        <link rel="stylesheet" href="css/seidweather-large.css">
+    </head>
+    <body>
+        <a href="index.html">
+            <header id="headerContainer">
+                <img id="seidsymbol" src="images/seidweathersymbol.png" alt="silhouette of Idaho">
+                <div id="headerText">
+                    <h1 id="siteTitle">Southeast Idaho <span id="weatherHead">Weather</span></h1>
+                    <h2 id="tagline">Keeping Our Eye <span>On The Sky</span></h2>
+                </div>
+            </header>
+        </a>
+        <nav id="mainNav">
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+                <li class="firstlink"><a href="index.html">Home</a></li>
+                <li><a href="preston.html">Preston</a></li>
+                <li><a href="sodasprings.html">Soda Springs</a></li>
+                <li id="activelink"><a href="fishhaven.html">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li class="lastnavlink"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="mainContent" id="hero">
+                <h1 id="townHeading">Fish Haven</h1>
+                <img id="heroImg" src="images/heroDucksLarge.jpg" alt="Snowy Lake Scene" sizes="60vw"
+                srcset="images/heroDucksSmall.jpg 400w,images/heroDucksMedium.jpg 600w, images/heroDucksLarge.jpg 900w"/>
+                <div id="summary">
+                    <h3>Weather Summary</h3>
+                    <p>Currently: <span id="condition">N/A</span></p>
+                    <p>Temperature: <span><span id="temp">N/A</span>&deg; F</span></p>
+                    <p>Wind Chill: <span id="wchill">N/A</span></p>
+                    <p>Humidity: <span><span id="humid">N/A</span>&percnt;</span></p>
+                    <p>Wind Speed: <span><span id="wind">N/A</span> mph</span></p>
+                </div>
+            </div>
+            <div class="mainContent" id="forecast">
+                <h2 id="forecastHeading">5 Day Forecast</h2>
+                <table>
+                    <tr>
+                        <th id="day1">Mon</th>
+                        <th id="day2">Tue</th>
+                        <th id="day3">Wed</th>
+                        <th id="day4">Thu</th>
+                        <th id="day5">Fri</th>
+                    </tr>
+                    <tr id="icons">
+                        <td><img id="day1pic" src="#" alt="alt"/></td>
+                        <td><img id="day2pic" src="#" alt="alt"/></td>
+                        <td><img id="day3pic" src="#" alt="alt"/></td>
+                        <td><img id="day4pic" src="#" alt="alt"/></td>
+                        <td><img id="day5pic" src="#" alt="alt"/></td>
+                    </tr>
+                    <tr id="temps">
+                        <td><span id="day1temp">N/A</span> &deg;F</td>
+                        <td><span id="day2temp">N/A</span> &deg;F</td>
+                        <td><span id="day3temp">N/A</span> &deg;F</td>
+                        <td><span id="day4temp">N/A</span> &deg;F</td>
+                        <td><span id="day5temp">N/A</span> &deg;F</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mainContent" id="events">
+                <h2 id="eventsHeading">Local Events</h2>
+                <ul id="eventsList">
+                </ul>                    
+            </div>
+            <article class="mainContent" id="article">
+                <h3>Bear Lake Monster: Fact or Fiction?</h3>
+                <p id="byline">By Archer Phillips</p>
+                <figure>
+                    <a href="https://bearlakemonster.com/about/" rel="noopener"><img src="images/monster.jpg" alt="Illustration of the Bear Lake Monster"/></a>
+                    <figcaption>Bear Lake Monster Illustration.</figcaption>
+                </figure>
+                <p>The Bear Lake Monster has been a part of local folklore since long before the first reported sighting in 1868. It has had many descriptions ranging from something like a walrus without tusks to a crocodile or reptile. Charles C. Rich contributed articles to the Deseret Evening News in the 1800s – the first published works to describe the mysterious creature. Local Native American tribes also passed down stories of the monster. Rich stated in the Aug. 5, 1868 Deseret News article that “The Indians say there is a monster animal in the Lake that has captured and carried away Indians while in the Lake swimming; but they say it has not been seen by them for many years, not since the buffalo inhabited the valley. They represent it as being of the serpent kind, but having legs about eighteen inches long on which they sometimes crawl out of the water a short distance on the shore. They also say it spirts water upwards out of its mouth.” The report continued to describe sightings of the monster(s) from local citizens. There have been additional sightings in the years since Charles C. Rich’s article, but the most recent was in 2002. Brian Hirschi, a local businessman, reported that the monster approached him while he was out on the lake. He described the monster as having green skin and red eyes. It has been nearly two decades since the last sighting – will you be the next eyewitness?</p>
+            </article>
+        </main>
+        <footer>
+            <div id="contact">
+                <div id="contactMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.4877645228735!2d-111.87577298434546!3d42.09702337920543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f7e967e1ebc7%3A0x14469667cfe31546!2s30%20N%201st%20E%2C%20Preston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1572776267772!5m2!1sen!2sus" style="border:0;" allowfullscreen="" title="Map showing location of Southeast Idaho Weather Headquarters"></iframe>
+                </div>
+                <div id="info">
+                    <p><span id="contactHeader">Southeast Idaho Weather</span></p>
+                    <address>
+                        <p>30 N 1st E <br>Preston, ID 83263</p>
+                    </address>
+                    <img id="phone" src="images/phone.png" alt="Phone Icon"/>
+                    <p id="number">208.555.5555</p>
+                    <br>
+                    <img id="envelope" src="images/envelope.png" alt="Envelope Icon"/>
+                    <p id="email"><a href="mailto:#">info@seidweather.com</a></p>
+                </div>
+            </div>
+            <div id="footerContent">
+                <p id="currentDate"></p>
+                <p>&copy; <span id="copyrightdate"></span> Heather Holt &nbsp; &vert; &nbsp; Utah, USA &nbsp; &vert; &nbsp; <a href="http://www.byui.edu/online" rel="noopener" target="_blank">BYU-Idaho Online Learning</a> &nbsp; &vert; &nbsp; <a href="../termsofuse.html" target="_blank">Terms of Use</a> &nbsp; &vert; &nbsp; <a href="../attributions.html" target="_blank">Attributions</a><br>
+                This page was last updated on <span id="modifieddate"></span> <br>
+                <a href="../index.html">Return to Assignment Portal</a></p>
+            </div>
+        </footer>
+        <script src="js/dates.js"></script>
+        <script src="js/fish.js"></script>
+        <script src="js/windchill.js"></script>
+        <script src="js/onload-fish.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script src="js/fontloader.js"></script>
+    </body>
+</html>

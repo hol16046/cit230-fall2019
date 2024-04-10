@@ -1,0 +1,810 @@
+/* --------------------------------------------- */
+/* --------- Page Formatting ----------- */
+/* --------------------------------------------- */
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {  
+    font-family: $sans;
+    font-weight: bold;
+    color: $gray;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $serif;
+    color: $medBlue;
+}
+
+/* Non-Navigational Link Styles */
+a {
+	text-decoration: none;
+}
+a:link{
+	color: $medBlue;
+}
+a:visited{
+	color: $darkBlue;
+}
+a:hover{
+	color: $complementary;
+}
+a:active{
+	color: $medBlue;
+}
+
+/* --------------------------------------------- */
+/* --------- Header Formatting ----------- */
+/* --------------------------------------------- */
+header {
+    text-align: center;
+}
+h1 {
+    color: #333335;
+}
+#headerContainer {
+    display: flex;
+    margin: 20px 40px;
+    height: 160px;
+}
+#brandingContainer {
+    display: flex;
+    margin: auto;
+}
+
+/* ----- Logo/Tagline Formatting ----- */
+#logo {
+    max-width: 30%;
+    height: auto;
+    max-height: 150px;
+    margin: auto;
+}
+#headerText {
+    width: 100%;
+    margin: auto;
+}
+#siteTitle {
+    font-size: 9.5vw;
+    text-align: right;
+}
+#suites {
+    white-space: pre;
+}
+
+@media only screen and (min-width: 520px) {
+    #siteTitle {
+        font-size: 50px;
+    }
+}
+@media only screen and (min-width: 720px) {
+    #brandingContainer {
+        max-width: 650px;
+    }
+    #headerText {
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+}
+
+/* ----- Main Nav Formatting ----- */
+
+// Outer navigation wrapper styling
+.navigation {
+  height: $nav-height;
+  background: $darkBlue;
+}
+// Logo and Branding Styling
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: $nav-height;
+  text-transform: uppercase;
+  font-size: 1em;
+  a, a:visited {
+    color: $lightGray;
+    text-decoration: none;
+  }
+}
+
+
+.nav-container {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      a, a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        background: $darkBlue;
+        color: $lightGray;
+        text-decoration: none;
+        &:hover {
+          background: $gray;
+          color: $lightGray;          
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          content: ' ▾';
+        }
+      } // Dropdown list
+      ul li {
+        min-width: 200px;
+        a {
+          padding: 15px;
+          line-height: 20px;       
+        }
+      }  
+    }
+  }
+}
+// Dropdown list binds to JS toggle event
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Navigation */
+
+//Bind to JS Toggle
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 200px;
+  right: 0;
+  background: $darkBlue;
+  height: $nav-height;
+  width: $nav-height;
+}
+
+@media only screen and (max-width: $breakpoint) {
+  // Hamburger visible on mobile only
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span, span:before, span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $lightGray;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before, &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+/* ----- Link Styling ----- */
+#activelink {
+    background-color: $gray;
+}
+nav a:link {
+    color: $lightGray;
+}
+nav a:visited {
+    color: $lightGray;
+}
+nav a:hover {
+    color: $lightGray;
+}
+nav li:hover {
+    color: $lightGray;
+    background-color: $gray;
+}
+nav a:active {
+    color: $lightGray;
+}
+#activelink:hover {
+    color: $lightGray;
+    background-color: $gray;
+}
+#activelink a:hover {
+    color: $lightGray;
+}
+#activelinkmenu {
+    background-color: $gray;
+}
+#activelinkmenu:hover {
+    color: $lightGray;
+    background-color: $gray;
+}
+#activelinkmenu a:hover {
+    color: $lightGray;
+}
+
+/* --------------------------------------------- */
+/* --------- Footer Formatting ----------- */
+/* --------------------------------------------- */
+footer {
+    font-size: 16px;
+    text-align: center;
+    background-color: $darkBlue;
+    color: $lightGray;
+}
+footer a {
+    color: $lightGray;
+    text-decoration: underline;
+}
+footer a:link {
+    color: $lightGray;
+    text-decoration: underline;
+}
+footer a:visited{
+	color: $lightGray;
+}
+footer a:hover{
+	color: $lightGray;
+}
+footer a:active{
+	color: $lightGray;
+}
+/* ----- Contact Info Styling ----- */
+#contact {
+    background-color: $darkBlue;
+    padding: 20px;
+    text-align: right;
+}
+#contactHeader {
+    font-family: $sans;
+}
+#contactMap {
+    display: none;
+}
+#contact p {
+    margin-right: 10px;
+}
+#phone {
+    margin-bottom: -1px;
+    width: 13px;
+}
+#envelope {
+    margin-bottom: -5px;
+    width: 20px;
+}
+#number, #email {
+    display: inline;
+}
+/* ----- Footer Info Styling ----- */
+#footerContent {
+    padding: 15px;
+}
+#contactpage {
+    text-align: center;
+    #contactMap {
+        display:none;
+    }
+}
+
+
+/* --------------------------------------------- */
+/* --------- Home Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+main {
+    max-width: 1020px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+#hero {
+    position: relative;
+    min-height: 155px;
+    display: block;
+    margin-top: 20px;
+}
+#heroImg {
+    width: 100%;
+    min-height: 220px;
+    border: 3px solid $lightGray;
+}
+#action {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: $darkBlue;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid $brightBlue;
+    text-transform: uppercase;
+}
+#actionbtn:link {
+    color: $lightGray;
+}
+#actionbtn:visited{
+    color: $lightGray;
+}
+#actionbtn:active {
+    color: $lightGray;
+}
+#actionbtn:hover {
+    color: $lightGray;
+}
+#action:hover {
+    background-color: $complementary;
+}
+#hero h2 {
+    color: $mutedBlue;
+}
+#hero p {
+    text-align: left;
+}
+article {
+    text-align: left;
+    margin-top: 10px;
+    width: 100%;
+}
+article figure {
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid $medBlue;
+}
+article figure img {
+    width: 100%;
+    border: 3px solid $lightGray;
+}
+#featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px auto;
+    figure {
+        margin: 10px 0 0 0;
+        width: 100%;
+        img {
+            width: 100%;
+            border: 3px solid $lightGray;
+        }
+        figcaption {
+            margin: 5px;
+        }
+    }
+}
+
+
+/* --------------------------------------------- */
+/* --------- Reservations Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+#reservations {
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+}
+#reserveHeading {
+    font-family: $sans;
+    color: $gray;
+}
+#reservationInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+#reservationInfo fieldset {
+    margin: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 100%;
+}
+#guestInfo {
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 20px;
+}
+#guestInfo label {
+    margin: 10px;
+}
+legend {
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0 5px;
+    padding: 0 10px;
+}
+label {
+    margin: 15px 0 0 10px;
+}
+input, select, textarea {
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+input[type="radio"] {
+    width: 13px;
+    margin-left: 20px;
+} 
+
+textarea {
+    height: 100px;
+}
+#currentLevel {
+    margin-left: 10px;
+    color: $gray;
+}
+#requiredFields {
+    margin: 10px;
+    font-size: .75rem;
+}
+.inputLabel  {
+    color: $mutedBlue;
+}
+.radioLabel {
+    color: $gray;
+}
+input, textarea, select {
+    border: 2px solid $lightGray;
+}
+#dates {
+    display: flex;
+    flex-direction: column;
+}
+#dates {
+    margin: 10px;
+    width: 95%;
+}
+
+#lastDate {
+    margin: 10px 0 0 10px;
+}
+
+#countryInfo {
+    margin: 0;
+}
+#specify {
+    padding-left: 10px;
+}
+#submit {
+    margin: 0 auto;
+    color: $lightGray;
+    background-color: $darkBlue;
+    border: 3px solid $brightBlue;
+    width: fit-content;
+}
+#submit input:hover {
+    background-color: $complementary;
+}
+
+/* --------------------------------------------- */
+/* --------- Thanks Page Formatting ----------- */
+/* --------------------------------------------- */
+#thanksMain {
+    max-width: 750px;
+    margin: 0 auto;
+}
+#thanks {
+    font-size: 20px;
+}
+#thanksImg {
+    margin-top: 20px;
+    max-width: 700px;
+}
+
+/* --------------------------------------------- */
+/* --------- Contact Us Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+#contactUs {
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+}
+#contactUsInfo {
+    margin: 20px auto;
+    text-align: left;
+    padding: 0 10px;
+}
+#contactUsInfo p {
+    margin: 10px 0;
+}
+#address {
+    margin-top: 20px;
+}
+#contactUsForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+#contactUsForm fieldset {
+    margin: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* --------------------------------------------- */
+/* --------- Temples Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+#templesMain {
+    padding: 0;
+}
+#templesHeading {
+    font-family: $sans;
+    color: $gray;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 auto;
+    section {
+        width: 100%;
+        margin-top: 30px;
+        background-color: $darkBlue;
+        color: $lightGray;
+        padding: 10px;
+        border: 1px solid $darkBlue;
+        box-shadow: 0px 0px 10px $gray;
+        font-size: 18px;
+        word-wrap: normal;
+        .photo {
+            position: relative;
+            width: 85%;
+            margin: 15px auto 0 auto;
+            img {
+                width: 100%;
+                border: 1px solid $gray;
+            }
+            .weather {
+                width: 15%;
+                background-color: $darkBlue;
+                border: 2px solid $medBlue;
+                padding: 5px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                img {
+                    width: 90%;
+                    border: none;
+                    margin: 0;
+                }
+                p {
+                    color: $lightGray;
+                }
+            }
+        }
+        h3 {
+            color: $lightGray;
+            text-decoration: underline;
+            text-decoration-color: $brightBlue;
+        }
+        h4, h5 {
+            font-family: $sans;
+            font-size: 20px;
+            text-align: left;
+            color: $lightGray;
+            text-decoration: underline;
+            text-decoration-color: $brightBlue;
+        }
+        h5 {
+            margin-left: 15px;
+        }
+        ul {
+            list-style-type: none;
+            text-align: left;
+        }
+        div {
+            margin: 10px;
+        }
+        .schedule p {
+            text-align: left;
+            margin-left: 15px;
+        }
+        .email:link {
+            color: $lightGray;
+        }
+        .email:visited {
+            color: $lightGray;
+        }
+        .email:active {
+            color: $lightGray;
+        }
+        .email:hover {
+            color: $lightGray;
+            text-decoration: underline;
+        }
+        .email, .phone {
+            font-size: 14px;
+        }
+    }
+}
+.tagline {
+    margin: 5px;
+    font-style: italic;
+}
+section:last-child {
+    margin-bottom: 20px;
+}
+
+/* --------------------------------------------- */
+/* --------- Amenities Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+
+#services {
+    #amenitieslist {
+        display: grid;
+        grid-template-columns: 1fr;
+        #amenities, #serviceslist {
+            background-color: $darkBlue;
+            color: $lightGray;
+            margin: 10px auto;
+            padding: 20px 10px;
+            width: 100%;
+            h3 {
+                color: $lightGray;
+                text-decoration: underline;
+                text-decoration-color: $brightBlue;
+            }
+            ul {
+                text-align: left;
+                margin-top: 10px;
+            }
+            a:link{
+                color: $lightGray;
+                text-decoration: underline;
+            }
+            a:visited {
+                color: $lightGray;
+                text-decoration: underline;
+            }
+            a:active {
+                color: $lightGray;
+                text-decoration: underline;
+            }
+            a:hover {
+                color: $lightGray;
+                text-decoration: underline;
+            }
+        }
+        figure {
+            width: 100%;
+            margin: 20px auto;
+            img {
+                width: 100%;
+                border: 3px solid $lightGray;
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------- */
+/* --------- Reception Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+#receptions {
+    #features {
+        display: grid;
+        figure {
+            width: 100%;
+            margin: 20px auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #receptionForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        fieldset {
+            margin: 15px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+            width: 100%;
+        }
+    }
+}
+
+/* --------------------------------------------- */
+/* --------- Missionaries Page Main Content Formatting ----------- */
+/* --------------------------------------------- */
+#missionaries {
+    #rooms {
+        display: grid;
+        figure {
+            width: 100%;
+            margin: 20px auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #missionaryForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        fieldset {
+            margin: 15px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+            width: 100%;
+        }
+    }
+}
